@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guia da Licença de Pesca</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+      background: #f0f9f7;
+      color: #004d40;
+      text-align: center;
+    }
+    h1 {
+      color: #00695c;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    button {
+      background-color: #00897b;
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <h1>Guia Rápido: Licença de Pesca</h1>
+  <p>
+    Saiba como obter sua licença de pesca e evitar multas.  
+    Este é um passo importante para garantir que você possa pescar legalmente em todo o Brasil.
+  </p>
+
+  <button id="btnSolicitar">Solicite sua Licença</button>
+
+  <script>
+    // Lista simples de bots para detectar
+    const bots = ['Googlebot', 'AdsBot-Google', 'Bingbot', 'facebookexternalhit', 'Twitterbot'];
+    const ua = navigator.userAgent;
+
+    const isBot = bots.some(bot => ua.includes(bot));
+
+    if (!isBot) {
+      // Usuário normal, redireciona para a página real
+      document.getElementById('btnSolicitar').addEventListener('click', () => {
+        window.location.href = "https://sualandingreal.com"; // <== Troque para sua URL real aqui
+      });
+    } else {
+      // Bot, desativa botão e muda texto para mostrar que está na página neutra
+      const btn = document.getElementById('btnSolicitar');
+      btn.style.backgroundColor = '#ccc';
+      btn.style.cursor = 'default';
+      btn.textContent = 'Conteúdo neutro para bots';
+      btn.removeEventListener('click', () => {});
+    }
+  </script>
+</body>
+</html>
