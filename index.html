@@ -1,120 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>Licença de Pesca 2025</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      max-width: 360px;
-      margin: auto;
-    }
-    header {
-      background-color: #00264d;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .urgente {
-      background-color: #e60000;
-      color: #fff;
-      font-weight: bold;
-      text-align: center;
-      padding: 10px;
-      font-size: 18px;
-    }
-    .countdown {
-      text-align: center;
-      font-size: 22px;
-      font-weight: bold;
-      color: #e60000;
-      margin: 20px 0;
-    }
-    .container {
-      padding: 20px;
-    }
-    .botao {
-      display: block;
-      background-color: #007bff;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin: 20px 0;
-      font-size: 18px;
-    }
-    .selo {
-      display: block;
-      text-align: center;
-      margin: 20px auto;
-    }
-    .depoimentos {
-      background: #fff;
-      border-radius: 5px;
-      padding: 10px;
-      margin-bottom: 15px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .nome {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>gov.br • Serviços ao Cidadão</h1>
-  </header>
-  <div class="urgente">ÚLTIMAS VAGAS DISPONÍVEIS!</div>
-
-  <div class="countdown" id="timer">05:00</div>
-
-  <div class="container">
-    <p>
-      A Licença de Pesca 2025 já está disponível! Garanta agora mesmo seu direito de pescar legalmente em todo o território nacional. Processo rápido, seguro e 100% online.
-    </p>
-    <a href="https://licencadepescaa.fun/inicio/" class="botao">Solicitar Licença Agora</a>
-
-    <img src="https://i.imgur.com/tUWVKqV.png" alt="Selo de Segurança" class="selo" width="120">
-
-    <div class="depoimentos">
-      <div class="nome">João Marcos - MG</div>
-      <div>"Achei que era difícil, mas em 2 minutos estava com a minha licença pronta. Muito obrigado!"</div>
-    </div>
-    <div class="depoimentos">
-      <div class="nome">Carlos Henrique - PA</div>
-      <div>"Pesco todo ano, mas dessa vez fiz com antecedência! Plataforma confiável e fácil de usar."</div>
-    </div>
-    <div class="depoimentos">
-      <div class="nome">Silvana R. - SP</div>
-      <div>"Fiquei na dúvida, mas entrei no link e deu tudo certo. Agora tô legalizada!"</div>
-    </div>
-  </div>
-
-  <script>
-    let minutos = 4;
-    let segundos = 59;
-    const timer = document.getElementById("timer");
-
-    function atualizarContador() {
-      const m = minutos.toString().padStart(2, '0');
-      const s = segundos.toString().padStart(2, '0');
-      timer.innerText = `${m}:${s}`;
-      if (minutos === 0 && segundos === 0) return;
-      if (segundos === 0) {
-        minutos--;
-        segundos = 59;
-      } else {
-        segundos--;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Licença de Pesca 2025</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
       }
-    }
+      .top-bar {
+        background-color: #003366;
+        color: white;
+        text-align: center;
+        padding: 12px 0;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .alerta {
+        background-color: red;
+        color: white;
+        text-align: center;
+        padding: 8px 0;
+        font-weight: bold;
+      }
+      .container {
+        max-width: 480px;
+        margin: auto;
+        padding: 20px;
+        background-color: white;
+        text-align: center;
+      }
+      .timer {
+        font-size: 24px;
+        font-weight: bold;
+        color: red;
+        margin: 15px 0;
+      }
+      .descricao {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      .botao {
+        background-color: #007bff;
+        color: white;
+        padding: 15px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        width: 100%;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      .botao::before {
+        content: "\1F512 "; /* Cadeado emoji */
+      }
+      .selo {
+        display: block;
+        margin: 10px auto 20px;
+        max-width: 120px;
+      }
+      .depoimento {
+        background: #f1f1f1;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+      .depoimento strong {
+        display: block;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-bar">gov.br • Serviços ao Cidadão</div>
+    <div class="alerta">ÚLTIMAS VAGAS DISPONÍVEIS!</div>
+    <div class="container">
+      <div class="timer" id="timer">05:00</div>
+      <p class="descricao">
+        A Licença de Pesca 2025 já está disponível! Garanta agora mesmo seu direito de pescar legalmente em todo o território nacional. <br />
+        Processo rápido, seguro e 100% online.
+      </p>
+      <a class="botao" href="https://licencadepescaa.fun/inicio/">Solicitar Licença Agora</a>
+      <img src="https://i.imgur.com/JrKoF0k.png" alt="Selo de segurança" class="selo" />
 
-    setInterval(atualizarContador, 1000);
-  </script>
-</body>
+      <div class="depoimento">
+        <strong>João Marcos - MG</strong>
+        "Achei que era difícil, mas em 2 minutos estava com a minha licença pronta. Muito obrigado!"
+      </div>
+      <div class="depoimento">
+        <strong>Carlos Henrique - PA</strong>
+        "Pesco todo ano, mas dessa vez fiz com antecedência e recebi tudo online. Rápido demais!"
+      </div>
+    </div>
+
+    <script>
+      let tempo = 4 * 60 + 59;
+      const el = document.getElementById("timer");
+      setInterval(() => {
+        const min = String(Math.floor(tempo / 60)).padStart(2, "0");
+        const sec = String(tempo % 60).padStart(2, "0");
+        el.textContent = `${min}:${sec}`;
+        if (tempo > 0) tempo--;
+      }, 1000);
+    </script>
+  </body>
 </html>
